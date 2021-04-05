@@ -17,7 +17,7 @@ public class ExitGame {
 				num = 4;
 				System.out.println("프로그램 종료!");
 			}
-		}
+		}/////
 		sc.close();
 	}
 
