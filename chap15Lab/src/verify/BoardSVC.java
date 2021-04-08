@@ -51,6 +51,7 @@ public class BoardSVC {
 	}
 
 	// 삭제할 글의 작성자 및 비밀번호 입력하는 메소드
+	//작성위치
 	public void removeArticle(Scanner sc) {
 		System.out.println("삭제할 글의 작성자와 비밀번호를 입력 하세요.");
 		System.out.print("작성자:");
@@ -61,7 +62,33 @@ public class BoardSVC {
 
 		removeArticle(register, passwd);
 	}
-
+	/*//  작성자가 작성한 글을 전부 다 한번에 지우는 방법
+	    public void removeArticle(Scanner sc, Object passwd) {
+		System.out.println("삭제할 글의 작성자와 비밀번호를 입력 하세요.");
+		System.out.print("작성자:");
+		String register = sc.next();
+        
+        if(boardList.size()>0){
+           //삭제기능 추가
+            int flag = -1;
+        	for(int i = 0; i<boardList.size(); i++) {
+        		if (boardList.get(i).getRegister().equals(register) && boardList.get(i).getPasswd().equals(passwd)) {
+        			boardList.remove(i);
+        			flag = i;
+        			i--;
+        		} 
+        		if(flag == -1){
+        			System.out.println("해당 작성자가 없거나 비밀번호가 잘못되었습니다.");
+        			return;
+        		}
+        	}
+        	System.out.println("성공적으로 글이 삭제되었습니다.");
+        }else{
+          System.out.println("등록된 글이 없습니다.");
+        }
+	}
+	*/
+    
 	// 글 삭제
 	public void removeArticle(String register, String passwd) {
 		if (boardList.size() > 0) {

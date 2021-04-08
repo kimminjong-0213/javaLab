@@ -9,6 +9,8 @@ public class PropertiesExample {
 		Properties properties  = new Properties();
 		String path = PropertiesExample.class.getResource("database.properties").getPath();
 		path = URLDecoder.decode(path, "utf-8");
+		
+		//해당 파일을 읽어 Map<String, String> 구조로 만들어 준다.
 		properties.load(new FileReader(path));
 		
 		String driver = properties.getProperty("driver");
