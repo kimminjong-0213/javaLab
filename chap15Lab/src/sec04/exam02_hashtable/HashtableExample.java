@@ -10,7 +10,7 @@ public class HashtableExample {
 		map.put("summer", "123");
 		map.put("fall", "1234");
 		map.put("winter", "12345");
-
+/////
 		Scanner scanner = new Scanner(System.in);
 
 		while (true) {
